@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Pokémon </title>
+	<link rel="icon" href="static/logo/mini_logo.png">
+	<link href="/static/style.css" rel="stylesheet" type="text/css">
+  </head>
+
+<body>
+
+
+
+
+     
+      <a href="/"><img src="static/logo/logo.png" class="logo"/></a>
+
+    <div class="banner" >
+    	
+      <a href="pokedex"  ><button class="btn" ><font color="#fff">Pokedex</font></button></a>
+      <a href="upload"  ><button class="btn" ><font color="#fff">Upload</font></button></a>
+      <a href="capacite"  ><button class="btn"><font color="#fff">Capacitées</font></button></a>
+      <a href="talent"  ><button class="btn"><font color="#fff">Talent</font></button></a>
+    </div>
+ <form action='/nvCapa' method="POST"  class="centrer" >
+			<h1>Ajoutée une capacitée</h1>
+			{% if verif== False %}
+			<h3><font color="red">Erreur, vous n'avez entrée aucune information</font></h3>
+			{% endif %}
+			<label> Nom : </label>
+			<input type="text" name="nom">
+		
+			<br>
+			<br>
+			<label> Type : </label>
+				<select type="text" name="Type">
+				{% for typ in type %}
+				<option value="{{ typ [0]}}">{{ typ [0]}}</option>
+				{% endfor %}
+
+				</select>
+
+			<br>
+			<br>
+				<label> Dégat : </label>
+				<input type="text" name="Degat">
+			
+			<br>
+			<br>
+				<label> Précision : </label>
+				<input type="text" name="Precison">
+			
+			<br>
+			<br>
+				<label> Description : </label>
+				<input type="text" name="Description">
+			<br>
+			<br>
+
+			<input type="submit" class="btn" value="Ajouter la capacitée ">
+</form>
+</body>

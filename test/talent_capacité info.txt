@@ -1,0 +1,14 @@
+Talent:
+
+	nom: Synchro
+	effet : Si un Pokémon doté du talent Synchro est empoisonné, paralysé ou brûlé, alors il transmettra son altération de statut à l'attaquant. Ce talent ne fonctionne pas avec le sommeil, le gel ou la confusion. 
+
+
+
+Capacité :
+
+	nom : Téléport
+	Type : Psy
+	Dégat : 0
+	Précision : 0
+	Description : Lors d'un combat la capacité fait toujours effet en dernier et permet de changer le Pokémon qui l'utilise avec l'un de ses équipiers. 

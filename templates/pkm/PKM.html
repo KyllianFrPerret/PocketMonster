@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Pokémon </title>
+	<link rel="icon" href="static/logo/mini_logo.png">
+	<link href="/static/style.css" rel="stylesheet" type="text/css">
+  </head>
+
+<body>
+
+<div class="container">
+
+
+      <a href="/"><img src="static/logo/logo.png" class="logo"/></a>
+
+    <div class="banner" >
+    	
+      <a href="pokedex" ><button class="btn" ><font color="#fff">Pokedex</font></button></a>
+      <a href="upload" ><button class="btn" ><font color="#fff">Upload</font></button></a>
+      <a href="capacite" ><button class="btn"><font color="#fff">Capacitées</font></button></a>
+      <a href="talent" ><button class="btn"><font color="#fff">Talent</font></button></a>
+    </div>
+
+
+</div>
+  <div class ="info-list">
+  <h1>N°{{ pkm [0][1]}} </h1>
+  <h1>{{ pkm [0][2]}} </h1>
+  <img id="image1" src="{{ pkm[0][0] }}"/>
+
+ 
+
+<h1>Stats</h1>
+<table style="border: 3px solid black; background-color: #FFFFFF;margin: auto;border-collapse: collapse;width: 75%;">
+  
+  
+  <th style="border: 3px solid black;" ><h2>PV</h2></th>
+  <th style="border: 3px solid black;" >{{ pkm [0][5]}}</th>
+ 
+  
+
+  <tr style="border: 3px solid black;">
+  <th style="border: 3px solid black;" ><h2>ATK</h2></th>
+  <th style="border: 3px solid black;" >{{ pkm [0][6]}}</th>
+ 
+  </tr>
+  
+  
+  <tr style="border: 3px solid black;">
+  <th style="border: 3px solid black;" ><h2>DEF</h2></th>
+  <th style="border: 3px solid black;" >{{ pkm [0][7]}}</th>
+ 
+  </tr>
+  
+  
+  <tr style="border: 3px solid black;">
+  <th style="border: 3px solid black;" ><h2>SPE</h2></th>
+  <th style="border: 3px solid black;" >{{ pkm [0][8]}}</th>
+ 
+  </tr>
+  
+  </table>
+  
+  
+   <h2> Evolution </h2>
+  <table style="border: 3px solid black; background-color: #77777F;margin: auto;">
+  
+  <tr>
+    <td ><a href="PKM?id={{ pkm[1][0][1]}}"><img src="{{ pkm[1][0][0] }}"/><h2>{{ pkm[1][0][2]}}</h2></a></td>
+    <td ><a href="PKM?id={{ pkm[1][1][1]}}"><img src="{{ pkm[1][1][0] }}"/><h2>{{ pkm[1][1][2]}}</h2></a></td>
+  </tr>
+</table>  
+  
+  
+  
+  <h1>Talent</h1>
+  <table style="border: 3px solid black; background-color: #FFFFFF;margin: auto;border-collapse: collapse;width: 80%;">
+
+
+		<tr style="border: 3px solid black;">
+				<th style="border: 3px solid black;" >Nom</th>
+				<th style="border: 3px solid black;">Effet</th>
+
+			</tr>
+
+		<tr style="border: 3px solid black;">
+				<td style="border: 3px solid black;"><a href="/talentPKM?id={{ pkm[2][0][0] }}"> {{ pkm[2][0][0] }} </a></td>
+				<td style="border: 3px solid black;"><a href="/talentPKM?id={{ pkm[2][0][0] }}"> {{ pkm[2][0][1] }} </a></td>
+
+		</tr>
+
+	
+</table>
+  
+  
+  
+  
+<br>
+<br>
+	<table style="border: 3px solid black; background-color: #FFFFFF;margin: auto;border-collapse: collapse;width: 85%;">
+
+
+		<tr style="border: 3px solid black;">
+				<th style="border: 3px solid black;" >Nom</th>
+				<th style="border: 3px solid black;">Type</th>
+				<th style="border: 3px solid black;">Degat</th>
+				<th style="border: 3px solid black;">Précision</th>
+				<th style="border: 3px solid black;">Description</th>
+			</tr>
+		{% for pk in pkm[3] %}
+		<tr style="border: 3px solid black;">
+				<td style="border: 3px solid black;"><a href="/capacitePKM?id={{ pk[0] }}"> {{ pk[1] }} </a></td>
+				<td style="border: 3px solid black;"><a href="/capacitePKM?id={{ pk[0] }}"> {{ pk[2] }} </a></td>
+				<td style="border: 3px solid black;"><a href="/capacitePKM?id={{ pk[0] }}"> {{ pk[3] }} </a></td>
+				<td style="border: 3px solid black;"><a href="/capacitePKM?id={{ pk[0] }}"> {{ pk[4] }} </a></td>
+				<td style="border: 3px solid black;"><a href="/capacitePKM?id={{ pk[0] }}"> {{ pk[5] }} </a></td>
+
+		</tr>
+
+		{% endfor %}
+
+  
+  
+
+  </div>
+</div>  
+  
+  </body>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Pokémon </title>
+	<link rel="icon" href="static/logo/mini_logo.png">
+	<link href="/static/style.css" rel="stylesheet" type="text/css">
+  </head>
+
+<body>
+
+
+
+
+     
+      <a href="/"><img src="static/logo/logo.png" class="logo"/></a>
+
+    <div class="banner" >
+    	
+      <a href="pokedex"  ><button class="btn" ><font color="#fff">Pokedex</font></button></a>
+      <a href="upload"  ><button class="btn" ><font color="#fff">Upload</font></button></a>
+      <a href="capacite"  ><button class="btn"><font color="#fff">Capacitées</font></button></a>
+      <a href="talent"  ><button class="btn"><font color="#fff">Talent</font></button></a>
+    </div>
+	
+
+	
+	
+	<form action='/asCapa' method="POST"  class="centrer" >
+			<h1>Assigner capacitée</h1>
+			
+				<label> Pokémon : </label>
+				<select name="pkm">
+				{% for ta in tal[0] %}
+				<option value="{{ ta [1]}}">{{ ta [2]}}</option>
+				{% endfor %}
+
+				</select>
+		
+			<br>
+			<br>
+				<label> Cpacité : </label>
+				<select name="Capa">
+				{% for ta in tal[1] %}
+				<option value="{{ ta [0]}}">{{ ta [1]}}</option>
+				{% endfor %}
+
+				</select>
+				
+				<br>
+				<br>
+				
+				<input type="submit" class="btn" value="Assigner la capacitée ">
+</form>
+
+</body>

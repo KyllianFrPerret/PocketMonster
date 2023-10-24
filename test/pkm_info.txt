@@ -1,0 +1,28 @@
+id	63
+nom	Abra
+type	Psy
+talent	Synchro
+pv	25
+atk	20
+def	15
+spe	90
+
+
+id	64
+nom	Kadabra
+type	Psy
+talent	Synchro
+pv	40
+atk	35
+def	30
+spe	105
+
+
+id	65
+nom	Alakazam
+type	Psy
+talent	Synchro
+pv	55
+atk	50
+def	45
+spe	95

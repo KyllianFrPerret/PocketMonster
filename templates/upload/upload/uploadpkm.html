@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Pokedex</title>
+	<link rel="icon" href="static/logo/mini_logo.png">
+	<link href="/static/style.css" rel="stylesheet" type="text/css">
+
+  </head>
+  
+<body>
+
+
+
+
+      <a href="/"><img src="static/logo/logo.png" class="logo"/></a>
+
+    <div class="banner" >
+    	
+      <a href="pokedex"  ><button class="btn" ><font color="#fff">Pokedex</font></button></a>
+      <a href="upload"  ><button class="btn" ><font color="#fff">Upload</font></button></a>
+      <a href="capacite"  ><button class="btn"><font color="#fff">Capacitées</font></button></a>
+      <a href="talent" ><button class="btn"><font color="#fff">Talent</font></button></a>
+    </div>
+
+
+
+
+ <form action='/nvPKM' method="POST"  class="centrer" enctype="multipart/form-data" >
+			<h1>Ajouter un pokémon</h1>
+			{% if verif== False %}
+			<h3><font color="red">Erreur, vous n'avez entrée aucune information</font></h3>
+			{% endif %}
+			
+			<label> Nom : </label>
+			<input type="text" name="nom">
+			<br>
+			<br>
+				<label> Pokedex national : </label>
+			<input type="text" name="num">
+			
+	
+			<br>
+			<br>
+				<label> Type : </label>
+				<select  name="Type">
+				{% for typ in type %}
+				<option value="{{ typ [0]}}">{{ typ [0]}}</option>
+				{% endfor %}
+
+				</select>
+		
+			<br>
+			<br>
+				<label> HP : </label>
+				<input type="text" name="hp">
+			<br>
+			<br>
+				<label> ATK : </label>
+				<input type="text" name="atk">
+			<br>
+			<br>
+			
+			<label> DEF : </label>
+				<input type="text" name="def">
+			<br>
+			<br>
+			<label> SPE : </label>
+			<input type="text" name="spe">
+
+			<br>
+			<br>
+
+			<input type="file" name="photos">
+
+				
+
+			<br>
+			<br>
+			
+			
+
+<input type="submit" class="btn" value="Ajoutet le pokémon ">
+</form>
+</body>

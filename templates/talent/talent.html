@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Pokémon </title>
+	<link rel="icon" href="static/logo/mini_logo.png">
+	<link href="/static/style.css" rel="stylesheet" type="text/css">
+  </head>
+
+<body>
+
+<div class="container">
+
+
+      <a href="/"><img src="static/logo/logo.png" class="logo"/></a>
+
+    <div class="banner" >
+    	
+      <a href="pokedex"><button class="btn" ><font color="#fff">Pokedex</font></button></a>
+      <a href="upload" ><button class="btn" ><font color="#fff">Upload</font></button></a>
+      <a href="capacite" ><button class="btn"><font color="#fff">Capacitées</font></button></a>
+      <a href="talent" ><button class="btn"><font color="#fff">Talent</font></button></a>
+    </div>
+ 
+
+
+</div>
+
+
+<div class ="info-list">
+<h1 >Talent</h1>
+<br>
+<br>
+	<table style="border: 3px solid black; background-color: #FFFFFF;margin: auto;border-collapse: collapse;">
+
+
+		<tr style="border: 3px solid black;">
+				<th style="border: 3px solid black;" >Nom</th>
+				<th style="border: 3px solid black;">Effet</th>
+
+			</tr>
+		{% for cap in capa %}
+		<tr style="border: 3px solid black;">
+				<td style="border: 3px solid black;"><a href="/talentPKM?id={{ cap[0] }}"> {{ cap[0] }} </a></td>
+				<td style="border: 3px solid black;"><a href="/talentPKM?id={{ cap[0] }}"> {{ cap[1] }} </a></td>
+
+		</tr>
+
+		{% endfor %}
+</table>
+</div>
+</body>
